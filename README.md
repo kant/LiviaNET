@@ -65,7 +65,7 @@ where X denotes the last (or desired) epoch in which the model was saved.
       * Stochastic gradient descent and RmsProp optimizers.
       * Images in Matlab and Nifti format supported. 
       * Loading of pre-trained weights at different layers.
-      * Connection of intermediate conv layers to the first fully connected layers (i.e. multi-scale fetures).
+      * Connection of intermediate conv layers to the first fully connected layers (i.e. multi-scale features).
       * Frequency of changes on learning rate customizable.
       * Note. This version includes Batch Normalization, which was not used in the Neuroimage paper.
 
@@ -74,10 +74,10 @@ If you use this code for your research, please consider citing the original pape
 
 - Dolz J, Desrosiers C, Ben Ayed I. "[3D fully convolutional networks for subcortical segmentation in MRI: A large-scale study."](http://www.sciencedirect.com/science/article/pii/S1053811917303324) NeuroImage (2017).
 
-I strongly encourage to cite also the work of Kamnitsas :"Kamnitsas, Konstantinos, et al. ["Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation."](http://www.sciencedirect.com/science/article/pii/S1361841516301839) Medical Image Analysis 36 (2017): 61-78.", since this code is based on his previous work, DeepMedic.
+I strongly encourage to cite also the work of Kamnitsas: "Kamnitsas, Konstantinos, et al. ["Efficient multi-scale 3D CNN with fully connected CRF for accurate brain lesion segmentation."](http://www.sciencedirect.com/science/article/pii/S1361841516301839) Medical Image Analysis 36 (2017): 61-78.", since this code is based on his previous work, DeepMedic.
 
 ### Important notes
-* In order to correctly run the training, the convnet needs that training labels are provided in a consecutive manner. This means that the first class must be label 0, the second class label 1, and so on. To ease this process I have included a functionality that takes all the images contained in a given folder and automatically corrects labels to be 0,1,2,etc. To do this, you should proceed as follows:
+* In order to correctly run the training, the convnet needs that training labels are provided in a consecutive manner. This means that the first class must be label 0, the second class label 1, and so on. To ease this process I have included a functionality that takes all the images contained in a given folder and automatically corrects labels to be 0, 1, 2, etc. To do this, you should proceed as follows:
 
 ```
 python processLabels.py ~yourpath/Training/LabelsNonCorrected ~yourpath/Training/LabelsCorrected 9 0
@@ -112,5 +112,5 @@ You can contact me at: jose.dolz.upv@gmail.com
 
 ### Other implementations:
 - * A version of the network in Keras has been implemented in: "joseabernal/iSEG2017"(https://github.com/joseabernal/iSeg2017-nic_vicorob)
-- * Another Keras version of this network can be found in : "Deep Gray Matter (DGM) Segmentation using 3D Convolutional Neural Network: application to QSM"(https://github.com/zl376/segDGM_CNN)
+- * Another Keras version of this network can be found in: "Deep Gray Matter (DGM) Segmentation using 3D Convolutional Neural Network: application to QSM"(https://github.com/zl376/segDGM_CNN)
 
